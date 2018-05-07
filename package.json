@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.10",
+    "express": "^4.16.3",
     "particle-api-js": "^7.2.0"
   }
 }

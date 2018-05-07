@@ -1,6 +1,13 @@
 const express = require('express');
 const app = express();
-const Particle = require('particle-api-js');
 
-const particle = new Particle();
+const deviceRouter = require('./routes/router.device');
 
+
+const PORT = 5000;
+
+app.use(express.static('server/public'));
+app.use('/devices',deviceRouter);
+
+
+app.listen(PORT,() => console.log(`Listening on port ${PORT}...`));

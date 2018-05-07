@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="vendors/angular.min.js"></script>
+  <script src="scripts/client.js"></script>
+  <title>Document</title>
+</head>
+<body ng-app="app">
+  <h1>Particle Test</h1>
+    <div ng-controller="MainController as vm">
+      <div>
+        <code>
+          Current: {{vm.reading}}<br>
+          Max: {{vm.dataMax()}}<br>
+          Min: {{vm.dataMin()}}<br>
+          Average: {{vm.dataAve()}}<br>
+        </code>
+      </div>
+    </div>
+</body>
+</html>
