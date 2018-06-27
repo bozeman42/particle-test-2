@@ -8,9 +8,9 @@
   <script src="scripts/client.js"></script>
   <title>Document</title>
 </head>
-<body ng-app="app">
+<body ng-controller="MainController as vm" ng-style="vm.lightSensitive()" ng-app="app">
   <h1>Particle Test</h1>
-    <div ng-controller="MainController as vm">
+    <div >
       <div>
         <code>
           Current: {{vm.reading}}<br>

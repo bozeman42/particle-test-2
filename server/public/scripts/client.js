@@ -27,5 +27,16 @@ app.controller('MainController',function($http,$interval){
       self.data = [...self.data,response.data.value];
     })
   }, 1000)
+  self.lightSensitive = () => {
+    if (self.data.length > 0) {
+      const value = self.data[self.data.length - 1];
+      return {
+        "background-color": `RGB(${value},${value},${value})`,
+        "color": value < 120 ? "whitesmoke": "black"
+      }
+    } else {
+      return null;
+    }
+  }
 })
 
